@@ -4,27 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Game</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/main.css">
-</head>   
-<body>
-    <canvas id="canvas1"></canvas>
-    <img src="./assets/image/player.png" alt="" id="player">
-    <img src="./assets/image/layer-1.png" alt="" id="layer1">
-    <img src="./assets/image/layer-2.png" alt="" id="layer2">
-    <img src="./assets/image/layer-3.png" alt="" id="layer3">
-    <img src="./assets/image/layer-4.png" alt="" id="layer4">
-    <img src="./assets/image/layer-5.png" alt="" id="layer5">
-    <img src="./assets/image/enemy_fly.png" alt="" id="enemyFly">
-    <img src="./assets/image/enemy_plant.png" alt="" id="plant">
-    <img src="./assets/image/enemy_spider_big.png" alt="" id="spiderBig">
-    <img src="./assets/image/fire.png" alt="" id="fire">
-    <img src="./assets/image/boom.png" alt="" id="colisionAnimation">
-    <img src="./assets/image/lives.png" alt="" id="live">
+    <title>Game</title>
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/Main/grid.css">
+    <link rel="stylesheet" href="./assets/css/Main/base.css">
+    <link rel="stylesheet" href="./assets/css/Main/main.css">
 
-    <script type="module" src="./assets/script/main.js"></script>
+</head>
+<body>
+    <div class="app">
+                <!--HEADER-->
+                    <div class="Header">
+                        <div class="subheader">
+                            <p>Explore</p>
+                        </div>
+                        <ul class="header-navbar-list">
+                            <li class="header-navbar-items btn btn-active">
+                                <i class="fa-regular fa-compass"></i>
+                                <a href="" id="Home">Home</a>
+                            </li>
+                            <li class="header-navbar-items btn">
+                                <i class="fa-solid fa-music"></i>
+                                <a href="" id="Music">Music</a>
+                            </li>
+                            <li class="header-navbar-items btn">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <a href="" id="Game Hot">Game Hot</a>
+                            </li>
+                            <li class="header-navbar-items btn">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <a href="" id="Game mới">Game mới</a>
+                            </li>
+                            <li class="header-navbar-items btn">
+                                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                                <a href="" id="Donate">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+                <!--CONTAINER-->
+                    <div class="Container">
+                        <div class="subheader">
+                            <div class="search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="slider-box">
+                            <div class="slide-contain-wrap">
+                                <div class="slide-contain">
+                                    <div class="slide-image" style="background-image: url(./assets/image/mainImage/game1.jpg);"></div>
+                                </div>
+                                <div class="slide-contain">
+                                    <div class="slide-image" style="background-image: url(./assets/image/mainImage/game2.jpg);"></div>
+                                </div>
+                                <div class="slide-contain">
+                                    <div class="slide-image" style="background-image: url(./assets/image/mainImage/game3.webp);"></div>
+                                </div>
+                                <div class="slide-contain">
+                                    <div class="slide-image" style="background-image: url(./assets/image/mainImage/game4.jpg);"></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="game-wrap">
+                            <div class="game-header">
+                                <h2>Trò chơi nổi bật</h2>
+                                <a href="" class="notes"> xem thêm </a>
+                            </div>
+                            <div class="grid">
+                                <div class="row">
+                                    <div class="col l-6 m-12 c-12">
+                                        <div class="itemGame-wrap">
+                                            <a href="./assets/subpage/dogGame.html" class="game" id="game1" style="background-image: url(./assets/image/mainImage/Itemgame1.png);">
+                                            </a>
+                                            <div class="game-descrip">
+                                                <p>di chuyển để tránh quái vật và scroll để tiêu diệt chúng</p>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="col l-6 m-12 c-12">
+                                        <div class="itemGame-wrap">
+
+                                            <a href="./assets/subpage/birdGame.html" class="game" id="game2" style="background-image: url(./assets/image/mainImage/Itemgame2.png);"></a>
+                                            <div class="game-descrip">
+                                                <p>bắn hạ quái vật</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--USER-->
+                    <div class="User">
+                        <div class="subheader">
+                            <ul class="extention-list">
+                                <li class="extention-items">
+                                    <i class="fa-regular fa-bell"></i>
+                                </li>
+                                <li class="extention-items">
+                                    <i class="fa-solid fa-heart"></i>
+                                </li>
+                                <li class="extention-items">
+                                    <i class="fa-solid fa-gear"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="user-wrap">
+                            <a href="#" class="avatar-user-box">
+                                <div class="avatar-user" style="background-image: url(./assets/image/mainImage/use-3.jpg);"></div>
+                            </a>
+                            
+                            <div class="user-descri">
+                                <p id="nameuser">Nguyen Tien Sy</p>
+                            </div>
+                        </div>
+                    </div>
+                
+    </div>
+    <script src="./assets/script/mainScript/mainScript.js"></script>
 </body>
 </html>

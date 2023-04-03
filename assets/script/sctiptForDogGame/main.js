@@ -3,6 +3,7 @@ import InputHandler from "./input.js"
 import { Background } from "./background.js"
 import { FlyingEnemy,GroundEnemy,ClimbingEnemy } from "./enemies.js"
 import { UI } from "./UI.js"
+var isFirstLoad = true;
 window.addEventListener('load', function(){
     const canvas = this.document.getElementById("canvas1")
     const ctx = canvas.getContext("2d")
@@ -93,5 +94,26 @@ window.addEventListener('load', function(){
         game.draw(ctx)
         if(!game.gameOver) requestAnimationFrame(animate)
     }
-    animate(0)
+    if(isFirstLoad) {
+        ctx.save();
+        ctx.fillStyle = 'black';
+        ctx.textAlign = 'center';
+        ctx.fillText('Guide', game.width*0.5, game.height * 0.5);
+        ctx.restore();
+    }
+     animate(0)
+    function restartGame() {
+        game.player.restart();
+        game.background.restart();
+        game.score = 0;
+        game.time = 0;
+        game.gameOver = false;
+        game.maxLives =5;
+        animate(0);
+    }
+    this.window.addEventListener("keydown", e=> {
+        if(e.key == "F2" && game.gameOver) {
+            restartGame();
+        } 
+    })
 })

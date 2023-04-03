@@ -46,4 +46,7 @@ export class Background{
             layer.draw(context)
         })
     }
+    restart(){
+        this.x = 0;
+    }
 }

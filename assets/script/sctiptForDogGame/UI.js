@@ -28,6 +28,7 @@ export class UI {
          context.fillStyle = 'black';
          context.textAlign = 'center';
          context.fillText('Game Over', this.game.width*0.5, this.game.height * 0.5);
+         context.fillText('Press F2 to restart ', this.game.width*0.5, this.game.height * 0.5+60);
         }
         context.restore()
      }

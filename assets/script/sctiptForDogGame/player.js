@@ -77,4 +77,10 @@ export class Player{
                 }
         })
     }
+    restart() {
+        this.currentState = this.states[0];
+        this.currentState.enter();
+        this.x = 0;
+        this.y = this.game.height - this.height -this.game.groundMargin;
+    }
  }
