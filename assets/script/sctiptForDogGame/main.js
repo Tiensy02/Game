@@ -109,6 +109,7 @@ window.addEventListener('load', function(){
         game.time = 0;
         game.gameOver = false;
         game.maxLives =5;
+        game.Enemies = []
         animate(0);
     }
     this.window.addEventListener("keydown", e=> {
