@@ -16,7 +16,6 @@ export default class InputHandler{
                 this.keys.push(e.key);
              
             }
-            console.log(this.keys)
         })
         window.addEventListener('keyup',e => {
             if(     e.key == "ArrowDown" ||
