@@ -19,7 +19,9 @@ class Enemy {
         {
             this.markedForDelection = true
             this.game.maxLives--;
-            
+        }
+        if(this.game.maxLives <= 0 ) {
+            this.game.gameOver = true
         }
     }
     draw(context){
