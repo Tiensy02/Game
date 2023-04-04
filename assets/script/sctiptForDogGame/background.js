@@ -48,5 +48,6 @@ export class Background{
     }
     restart(){
         this.x = 0;
+        this.speedModifier = 0;
     }
 }
