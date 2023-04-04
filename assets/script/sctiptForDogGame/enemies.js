@@ -1,5 +1,6 @@
 class Enemy {
-    constructor(){
+    constructor(game){
+        this.game = game;
         this.farmeX = 0 ;
         this.farmeY = 0;
         this.fps = 30;
@@ -14,7 +15,12 @@ class Enemy {
             this.farmeX > this.maxFarme ? this.farmeX = 0 : this.farmeX++;
             this.farmeTimer = 0;
         } else this.farmeTimer += deltatime
-        if ( this.x < - this.width ) this.markedForDelection = true
+        if ( this.x < - this.width ) 
+        {
+            this.markedForDelection = true
+            this.game.maxLives--;
+            
+        }
     }
     draw(context){
         context.drawImage(this.image, this.farmeX* this.width , 0 , this.width, this.height, this.x, this.y, this.width, this.height)
@@ -22,7 +28,7 @@ class Enemy {
 }
 export class FlyingEnemy extends Enemy{
     constructor(game){
-        super();
+        super(game);
         this.game = game;
         this.width = 60;
         this.height = 44;
@@ -44,7 +50,7 @@ export class FlyingEnemy extends Enemy{
 
 export class GroundEnemy extends Enemy{
     constructor(game) {
-        super();
+        super(game);
         this.game = game ;
         this.width = 60
         this.height = 87;
@@ -58,7 +64,7 @@ export class GroundEnemy extends Enemy{
 }
 export class ClimbingEnemy extends Enemy{
     constructor(game) {
-        super();
+        super(game);
         this.game = game ;
         this.width = 120
         this.height = 144;

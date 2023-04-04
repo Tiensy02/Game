@@ -95,13 +95,9 @@ window.addEventListener('load', function(){
         if(!game.gameOver) requestAnimationFrame(animate)
     }
     if(isFirstLoad) {
-        ctx.save();
-        ctx.fillStyle = 'black';
-        ctx.textAlign = 'center';
-        ctx.fillText('Guide', game.width*0.5, game.height * 0.5);
-        ctx.restore();
+      this.document.querySelector(".Guide").style.display ="flex"
     }
-     animate(0)
+    if(!isFirstLoad) animate(0)
     function restartGame() {
         game.player.restart();
         game.background.restart();
@@ -109,12 +105,18 @@ window.addEventListener('load', function(){
         game.time = 0;
         game.gameOver = false;
         game.maxLives =5;
-        game.Enemies = []
+        game.Enemies = [];
         animate(0);
     }
     this.window.addEventListener("keydown", e=> {
         if(e.key == "F2" && game.gameOver) {
             restartGame();
         } 
+        if (e.key ==" " && isFirstLoad ) {
+            animate(0);
+            isFirstLoad= false;
+      this.document.querySelector(".Guide").style.display ="none"
+
+        }
     })
 })

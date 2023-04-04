@@ -24,3 +24,39 @@
 #fire,#colisionAnimation,#live{
     display: none;
 }
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height:100vh;
+    align-items: center;
+}
+.Guide{
+    display: flex;
+    position:relative;
+    display: none;
+}
+.guide-image{
+    width: 150px;
+    background-size: contain;
+    height: 150px;
+    background-repeat: no-repeat;
+    margin: 0 20px;
+}
+.guide-scroll{
+    position:relative;
+}
+.guide-scroll-des{
+    position:absolute;
+    right: -50%;
+    bottom:25%;
+    font-size: 24px;
+}
+.guide-continue{
+    position: absolute;
+    bottom:-50%;
+    font-size: 30px;
+    left: 20%;
+    color: rgb(255, 81, 0);
+}
+
