@@ -48,6 +48,6 @@ export class Background{
     }
     restart(){
         this.x = 0;
-        this.speedModifier = 0;
-    }
+        this.game.speed= 0;
+}
 }
